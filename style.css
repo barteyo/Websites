@@ -65,7 +65,9 @@ header p {
       width: 90%;
     }
     header {
-      font-size: 18px;
+      height: 60px;
+      font-size: 19px;
+      padding-top: 15px;
     }
   }
 
