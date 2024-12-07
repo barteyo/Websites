@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prezenty</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="countdown">
+        <h3>Do Bożego Narodzenia zostało</h3>
+        <p id="par"></p>
+    </header>
+    <section>
+        <button id="tataBtn">
+            <p class="tataPar">Prezent dla Taty</p>
+            <p class="tataTextBtn">Opis: Brelok, poduszka, kubek,<br>smycz do kluczy</p><br>
+            <a href="https://allegro.pl/oferta/prezent-na-dzien-ojca-brelok-do-kluczy-z-grawerem-12286137394?fromVariant=12237142117" target="_blank" class="tataTextBtn">Brelok</a><br>
+            <a href="https://allegro.pl/oferta/zestaw-kubek-poduszka-zajebisty-tata-super-prezent-na-dzien-ojca-dla-taty-15744368432?fromVariant=15744499171" target="_blank" class="tataTextBtn">Poduszka, Kubek</a><br>
+            <a href="https://allegro.pl/oferta/smycz-do-kluczy-krotka-smyczka-aloha-hawaii-style-hawaje-plaza-palma-14540176365?bi_s=ads&bi_m=productlisting:desktop:queryandcategory&bi_c=ZTkzN2ViODctODQ5NC00MzA5LThlZGUtYTFhYTUxNGViMzYzAA&bi_t=ape&referrer=proxy&emission_unit_id=112082bc-2155-4c49-943e-1f739503894e" target="_blank" class="tataTextBtn">Smycz do kluczy</a><br><br>
+            <p class="tataTextBtn">Cena: 143,97 zł</p>
+        </button>
+        <button id="mamaBtn">
+            <p class="mamaPar">Prezent dla Mamy</p>
+            <p class="mamaTextBtn">Opis: Brelok, kosmetyki</p><br>
+            <a href="https://allegro.pl/oferta/prezent-na-dzien-ojca-brelok-do-kluczy-z-grawerem-12286137394?fromVariant=12237142117" target="_blank" class="mamaTextBtn">Brelok</a><br><br>
+            <p class="mamaTextBtn">Cena: 49zł + kosmetyki + wysyłka</p>
+        </button>
+    </section>
+    <div class="snowflakes">
+        <div class="snowflake">❄</div>
+        <div class="snowflake">❄</div>
+        <div class="snowflake">❄</div>
+        <div class="snowflake">❄</div>
+        <div class="snowflake">❄</div>
+        <div class="snowflake">❄</div>
+        <div class="snowflake">❄</div>
+        <div class="snowflake">❄</div>
+        <div class="snowflake">❄</div>
+        <div class="snowflake">❄</div>
+        <div class="snowflake">❄</div>
+        <div class="snowflake">❄</div>
+        <div class="snowflake">❄</div>
+        <div class="snowflake">❄</div>
+        <div class="snowflake">❄</div>
+        <div class="snowflake">❄</div>
+        <div class="snowflake">❄</div>
+        <div class="snowflake">❄</div>
+        <div class="snowflake">❄</div>
+        <div class="snowflake">❄</div>
+        <div class="snowflake">❄</div>
+        <div class="snowflake">❄</div>
+        <div class="snowflake">❄</div>
+        <div class="snowflake">❄</div>
+    </div>
+
+    <script>
+        const targetDate = new Date("2024-12-24T00:00:00");
+
+        function updateCountdown() {
+            const now = new Date();
+            const timeDifference = targetDate - now;
+
+            if (timeDifference <= 0) {
+                clearInterval(interval);
+                document.getElementById('countdown').innerHTML = "Czas minął!";
+                return;
+            }
+
+            const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+            document.getElementById("par").innerHTML = `${days} dni ${hours} godz. ${minutes} min. ${seconds} sek.`;
+        }
+
+        const interval = setInterval(updateCountdown, 1000);
+
+        updateCountdown()
+
+        document.getElementById('tataBtn').addEventListener('mouseover', function(){
+            document.getElementById('mamaBtn').style.opacity = 0
+        })
+        document.getElementById('tataBtn').addEventListener('mouseout', function(){
+            document.getElementById('mamaBtn').style.opacity = 1
+        })
+        document.getElementById('mamaBtn').addEventListener('mouseover', function(){
+            document.getElementById('tataBtn').style.opacity = 0
+        })
+        document.getElementById('mamaBtn').addEventListener('mouseout', function(){
+            document.getElementById('tataBtn').style.opacity = 1
+        })
+
+    </script>
+</body>
+</html>

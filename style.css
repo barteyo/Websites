@@ -1,0 +1,335 @@
+/* Ogólne */
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+body {
+    width: 100%;
+    background-image: url("background.png");
+    background-size: cover;
+    background-position: center;
+}
+section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-left: 700px;
+    gap: 10px;
+}
+a {
+    color: rgb(197, 197, 197);
+    text-decoration: underline;
+}
+a:visited {
+    color: rgb(197, 197, 197);
+    text-decoration: underline;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    padding: 10px 0;
+    z-index: 1000;
+}
+header h3 {
+    margin-top: 0;
+}
+header p {
+    margin-top: -20px;
+}
+
+/* Responsywność dla urządzeń mobilnych */
+
+  @media (max-width: 768px) {
+    section {
+      flex-direction: column;
+      margin: 0;
+      gap: 20px;
+    }
+    button {
+      width: 90%;
+      height: auto;
+      font-size: 15px;
+    }
+    button:hover {
+      height: auto;
+      width: 90%;
+    }
+    header {
+      font-size: 18px;
+    }
+  }
+
+/* Płatki śniegu */
+
+.snowflakes {
+    position: absolute;
+    top: -5%;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+.snowflake {
+    position: absolute;
+    top: -10%;
+    color: white;
+    font-size: 2rem;
+    animation: fall infinite linear;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0.5;
+    }
+}
+
+.snowflake:nth-child(1) {
+    left: 7%;
+    font-size: 1.3rem;
+    animation-duration: 10s;
+    animation-delay: 0s;
+  }
+
+  .snowflake:nth-child(2) {
+    left: 19%;
+    font-size: 1.1rem;
+    animation-duration: 12s;
+    animation-delay: 2.5s;
+  }
+
+  .snowflake:nth-child(3) {
+    left: 31%;
+    font-size: 1.5rem;
+    animation-duration: 8s;
+    animation-delay: 1s;
+  }
+
+  .snowflake:nth-child(4) {
+    left: 43%;
+    font-size: 1.4rem;
+    animation-duration: 9s;
+    animation-delay: 2s;
+  }
+
+  .snowflake:nth-child(5) {
+    left: 55%;
+    font-size: 1.3rem;
+    animation-duration: 10s;
+    animation-delay: 0s;
+  }
+
+  .snowflake:nth-child(6) {
+    left: 67%;
+    font-size: 1.1rem;
+    animation-duration: 8s;
+    animation-delay: 2.5s;
+  }
+
+  .snowflake:nth-child(7) {
+    left: 79%;
+    font-size: 1.5rem;
+    animation-duration: 12s;
+    animation-delay: 1s;
+  }
+
+  .snowflake:nth-child(8) {
+    left: 91%;
+    font-size: 1.4rem;
+    animation-duration: 9s;
+    animation-delay: 2s;
+  }
+
+  /* druga tura */
+
+ .snowflake:nth-child(9) {
+    left: 10%;
+    font-size: 1.3rem;
+    animation-duration: 10s;
+    animation-delay: 3s;
+  }
+
+  .snowflake:nth-child(10) {
+    left: 23%;
+    font-size: 1.1rem;
+    animation-duration: 9s;
+    animation-delay: 5.5s;
+  }
+
+  .snowflake:nth-child(11) {
+    left: 36%;
+    font-size: 1.5rem;
+    animation-duration: 12s;
+    animation-delay: 4.5s;
+  }
+
+  .snowflake:nth-child(12) {
+    left: 49%;
+    font-size: 1.4rem;
+    animation-duration: 8s;
+    animation-delay: 5s;
+  }
+
+  .snowflake:nth-child(13) {
+    left: 62%;
+    font-size: 1.3rem;
+    animation-duration: 7s;
+    animation-delay: 3s;
+  }
+
+  .snowflake:nth-child(14) {
+    left: 75%;
+    font-size: 1.1rem;
+    animation-duration: 10s;
+    animation-delay: 5.5s;
+  }
+
+  .snowflake:nth-child(15) {
+    left: 82%;
+    font-size: 1.5rem;
+    animation-duration: 11s;
+    animation-delay: 4.5s;
+  }
+
+  .snowflake:nth-child(16) {
+    left: 95%;
+    font-size: 1.4rem;
+    animation-duration: 9s;
+    animation-delay: 5s;
+  }
+
+  /* trzecia tura */
+
+  .snowflake:nth-child(17) {
+    left: 9%;
+    font-size: 1.3rem;
+    animation-duration: 10s;
+    animation-delay: 7s;
+  }
+
+  .snowflake:nth-child(18) {
+    left: 21%;
+    font-size: 1.1rem;
+    animation-duration: 12s;
+    animation-delay: 9.5s;
+  }
+
+  .snowflake:nth-child(19) {
+    left: 33%;
+    font-size: 1.5rem;
+    animation-duration: 8s;
+    animation-delay: 8.5s;
+  }
+
+  .snowflake:nth-child(20) {
+    left: 45%;
+    font-size: 1.4rem;
+    animation-duration: 11s;
+    animation-delay: 8s;
+  } 
+  .snowflake:nth-child(21) {
+    left: 57%;
+    font-size: 1.3rem;
+    animation-duration: 10s;
+    animation-delay: 7s;
+  }
+
+  .snowflake:nth-child(22) {
+    left: 69%;
+    font-size: 1.1rem;
+    animation-duration: 12s;
+    animation-delay: 9.5s;
+  }
+
+  .snowflake:nth-child(23) {
+    left: 71%;
+    font-size: 1.5rem;
+    animation-duration: 8s;
+    animation-delay: 8.5s;
+  }
+
+  .snowflake:nth-child(24) {
+    left: 83%;
+    font-size: 1.4rem;
+    animation-duration: 11s;
+    animation-delay: 8s;
+  }
+
+/* Dla taty */
+
+.tataPar {
+    opacity: 1;
+}
+.tataTextBtn {
+    opacity: 0;
+}
+#tataBtn {
+    color: white;
+    background-color: #056cf2;
+    border: none;
+    border-radius: 10px;
+    height: 50px;
+    text-align: center;
+    width: 175px;
+    font-size: 17px;
+    font-weight: bold;
+    box-shadow: 0px 0px 15px #056cf2;
+    transition: height 0.8s, width 0.8s, opacity 0.25s ease-in-out;
+    transform: translateZ(0);
+    overflow: hidden;
+}
+#tataBtn:hover {
+    height: 300px;
+    width: 400px;
+    box-shadow: 0px 0px 25px #058ff2,
+                0px 0px 40px #058ff2;
+}
+#tataBtn:hover .tataTextBtn {
+    opacity: 1;
+}
+
+/* Dla mamy */
+
+.mamaPar {
+    opacity: 1;
+}
+.mamaTextBtn {
+    opacity: 0;
+}
+#mamaBtn {
+    color: white;
+    background-color: #056cf2;
+    border: none;
+    border-radius: 10px;
+    height: 50px;
+    text-align: center;
+    width: 175px;
+    font-size: 17px;
+    font-weight: bold;
+    box-shadow: 0px 0px 15px #056cf2;
+    transition: height 0.8s, width 0.8s, opacity 0.25s ease-out;
+    transform: translateZ(0);
+    overflow: hidden;
+}
+#mamaBtn:hover {
+    height: 300px;
+    width: 400px;
+    box-shadow: 0px 0px 25px #058ff2,
+                0px 0px 40px #058ff2;
+}
+#mamaBtn:hover .mamaTextBtn {
+    opacity: 1;
+}
